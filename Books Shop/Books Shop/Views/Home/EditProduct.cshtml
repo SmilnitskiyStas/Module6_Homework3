@@ -1,0 +1,26 @@
+﻿@using Books_Shop.Entities;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Edit Product";
+}
+
+<form method="post">
+    <input type="number" name="id" value="@ViewBag.ProductId" hidden/>
+    <label>Name for book:</label>
+    <input type="text" name="title" value="@ViewBag.ProductTitle"/>
+    <br />
+    <label>Author:</label>
+    <input type="text" name="author" value="@ViewBag.ProductAuthor"/>
+    <br />
+    <label>Date of Create:</label>
+    <input type="text" name="dateOfCreate" value="@ViewBag.ProductDateOfCreate"/>
+    <br />
+    <label>Price:</label>
+    <input type="text" name="price" value="@ViewBag.ProductPrice"/>
+    <br />
+
+    <input type="submit" value="Submit" />
+</form>
