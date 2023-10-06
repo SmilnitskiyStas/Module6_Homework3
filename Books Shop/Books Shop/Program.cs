@@ -10,7 +10,7 @@ namespace Books_Shop
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddSingleton<IProductService, ProductService>();
+            builder.Services.AddTransient<IProductService, ProductService>();
             builder.Services.AddSingleton<IDataProvider, MemoryDataProvider>();
 
             builder.Services.AddControllersWithViews();

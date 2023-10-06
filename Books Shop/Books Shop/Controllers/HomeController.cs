@@ -28,11 +28,11 @@ namespace Books_Shop.Controllers
         public IActionResult CreateProduct() => View();
 
         [HttpPost]
-        public IActionResult CreateProduct(string title, string author, DateTime dateOfCreate, string price)
+        public IActionResult CreateProduct(Product product, string price)
         {
             decimal convertPrice = Convert.ToDecimal(price.Replace(".", ","));
 
-            Product product = new Product() { Title = title, Author = author, DateOfCreate = dateOfCreate, Price = convertPrice };
+            product.Price = convertPrice;
 
             _productProvider.Create(product);
 
@@ -55,11 +55,11 @@ namespace Books_Shop.Controllers
         }
 
         [HttpPost]
-        public IActionResult EditProduct(int id, string title, string author, DateTime dateOfCreate, string price)
+        public IActionResult EditProduct(Product product, string price)
         {
             decimal convertPrice = Convert.ToDecimal(price.Replace(".", ","));
 
-            Product product = new Product() {Id = id, Title = title, Author = author, DateOfCreate = dateOfCreate, Price = convertPrice };
+            product.Price = convertPrice;
 
             _productProvider.Update(product);
 

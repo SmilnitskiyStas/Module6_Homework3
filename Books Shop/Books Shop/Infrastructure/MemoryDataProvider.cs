@@ -7,6 +7,8 @@ namespace Books_Shop.Infrastructura
     {
         private List<Product> _data = new List<Product>() 
         { 
+            new Product() { Id = 1, Title = "Harry", Author = "Tom", DateOfCreate = DateTime.Parse("1999.10.12"), Price = 14.99m },
+            new Product() { Id = 2, Title = "Potter", Author = "Tom2", DateOfCreate = DateTime.Parse("2003.10.12"), Price = 18.99m },
         };
 
         public void CreateProduct(Product product)
