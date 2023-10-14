@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header>
+        <div><a href="/Home/Index">Home</a></div>
+        <div><a href="/Home/AllProduct">Products</a></div>
+        <div><a href="/Home/CreateProduct">Create</a></div>
+        <div>
+            
+        </div>
+    </header>
+    <div>
+        <h3>
+            @ViewBag.Title
+        </h3>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
